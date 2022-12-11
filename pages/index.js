@@ -22,7 +22,7 @@ export default function Home() {
           {products.map(product => {
             return (
               <div key={product.id} className={styles.card}>
-                <Image className={ProductsGrid.img} src={product.image} alt={`Preview of ${product.title}`} />
+                <Image className={ProductsGrid.img} width={80} height={80} src={product.image} alt={`Preview of ${product.title}`} />
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
                 <p>${product.price}</p>
