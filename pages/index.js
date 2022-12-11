@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 //components
+import Header from '../components/Header'
 import ProductsGrid from '../components/ProductsGrid';
 import Footer from '../components/Footer'
 
@@ -20,8 +21,14 @@ export default function Home() {
       </Head>
 
 
+      <Header />
+
+
       <main className={styles.main}>
-        <ProductsGrid />
+        <div className="container">
+          <h1>Главная</h1>
+          <ProductsGrid />
+        </div>
       </main>
 
       <Footer />
