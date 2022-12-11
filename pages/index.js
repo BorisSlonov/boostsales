@@ -4,7 +4,6 @@ import products from '../products.json'
 import styles from '../styles/Home.module.css'
 import ProductsGrid from '../styles/ProductsGrid.module.css'
 
-
 export default function Home() {
   return (
     <div className={styles.container}>
