@@ -14,14 +14,9 @@ export default function About() {
     return (
         <div className={styles.container}>
             <Head>
-                <title>boostsales about</title>
-                <meta name="description" content="инвайты и рассылка в телеграм" />
-                <link rel="icon" href="/favicon.ico" />
+                <title key="title">boostsales about test</title>
                 <link href="https://lk.easynetshop.ru/frontend/v5/ens-64ed800b.css" rel="stylesheet" />
             </Head>
-
-
-            <Header />
 
             <main className={styles.main}>
                 <div className="container">
@@ -30,7 +25,6 @@ export default function About() {
                 </div>
             </main>
 
-            <Footer />
 
             <Script
                 src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -38,7 +32,6 @@ export default function About() {
             />
             <Script
                 src="https://lk.easynetshop.ru/frontend/v5/ens-64ed800b.js"
-                strategy="beforeInteractive"
             />
 
         </div >

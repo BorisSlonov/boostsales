@@ -1,5 +1,5 @@
 ﻿import Image from 'next/image'
-import ProductsGrid from '../styles/ProductsGrid.module.scss'
+import ProductsGrid from '../styles/ProductsGridStyles.module.scss'
 import products from '../products.json'
 
 function productsGrid() {
