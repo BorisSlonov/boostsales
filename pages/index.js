@@ -1,26 +1,41 @@
 import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Home.module.scss'
+import { motion } from 'framer-motion'
 
 //components
-import Header from '../components/Header'
 import ProductsGrid from '../components/ProductsGrid';
 import Calc from '../components/Calc'
-import Footer from '../components/Footer'
 
+
+
+const TitleAnimation = {
+  hidden: {
+    opacity: 0,
+    x: -100
+  },
+  visible: {
+    opacity: 1,
+    x: 0
+  }
+}
 
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-
-
+    <div>
       <main className={styles.main}>
-        <div className="container">
-          <h1>Главная</h1>
-          
+        <motion.div
+          initial='hidden'
+          whileInView={'visible'}
+          viewport={{ once: true, amount: 0.2 }}
+          className="container"
+        >
+          <motion.h1 variants={TitleAnimation}>Главная</motion.h1>
+
+          <Calc />
           <ProductsGrid />
-        </div>
+        </motion.div>
       </main>
 
 
@@ -29,8 +44,10 @@ export default function Home() {
         strategy="beforeInteractive"
       />
       <Script
-        src="https://lk.easynetshop.ru/frontend/v5/ens-64ed800b.js"
+        src="//lk.easynetshop.ru/frontend/v5/test.js"
       />
+      {/* <Script src="three.r134.min.js" />
+      <Script src="vanta.rings.min.js" /> */}
 
     </div >
   )

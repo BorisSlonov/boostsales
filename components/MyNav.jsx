@@ -8,7 +8,7 @@ const MyNav = () => {
 
     return (
         <ul className={MyNavStyles.nav}>
-            <li className={router.pathname == "/" ?  MyNavStyles.activeLink : ""}>
+            <li className={router.pathname == "/" ? MyNavStyles.activeLink : ""}>
                 <Link href="/">Главная</Link>
             </li>
             <li className={router.pathname == "/about" ? MyNavStyles.activeLink : ""}>

@@ -14,5 +14,13 @@
         "image": "/images/tg.svg",
         "price": "2.25",
         "addToCard": "64ed800b302349"
+    },
+    {
+        "title": "Тест",
+        "id": "3",
+        "description": "Рассылка в лс телеграма!",
+        "image": "/images/tg.svg",
+        "price": "2.25",
+        "addToCard": "64ed800b302349"
     }
 ]

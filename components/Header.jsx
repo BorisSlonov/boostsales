@@ -2,6 +2,7 @@
 import headerStyles from '../styles/headerStyles.module.scss'
 import MyNav from './MyNav';
 
+
 const Header = () => {
     return (
         <div>
@@ -9,7 +10,11 @@ const Header = () => {
                 <div className="container">
                     <div className={headerStyles.header__body}>
                         <div className={headerStyles.header__item}>
-                            <Image className={headerStyles.header__logo} src="/images/tg.svg" alt="Vercel Logo" width={72} height={16} />
+                            <a href="/">
+                                <span>
+                                    boostsales.online
+                                </span>
+                            </a>
                         </div>
                         <div className={headerStyles.header__item}>
                             <MyNav />

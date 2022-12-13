@@ -4,10 +4,7 @@ import Script from 'next/script'
 import styles from '../styles/Home.module.scss'
 
 //components
-import Header from '../components/Header'
 import ProductsGrid from '../components/ProductsGrid';
-import Footer from '../components/Footer'
-
 
 
 export default function About() {
@@ -15,7 +12,6 @@ export default function About() {
         <div className={styles.container}>
             <Head>
                 <title key="title">boostsales about test</title>
-                <link href="https://lk.easynetshop.ru/frontend/v5/ens-64ed800b.css" rel="stylesheet" />
             </Head>
 
             <main className={styles.main}>
