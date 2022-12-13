@@ -1,6 +1,7 @@
 ﻿import Image from 'next/image'
 import headerStyles from '../styles/headerStyles.module.scss'
 import MyNav from './MyNav';
+import LangSwitcher from './LangSwitcher';
 
 
 const Header = () => {
@@ -18,6 +19,7 @@ const Header = () => {
                         </div>
                         <div className={headerStyles.header__item}>
                             <MyNav />
+                            <LangSwitcher />
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,17 @@
+﻿.block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+
+.locale {
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 5px;
+    &:hover {
+        background-color: var(--blue);
+    }
+}

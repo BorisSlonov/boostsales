@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import Layout from '../components/Layout'
 
 
+
 function Boostsales({ Component, pageProps }) {
   return (
     <Layout>

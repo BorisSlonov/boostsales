@@ -2,11 +2,13 @@ import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Home.module.scss'
 import { motion } from 'framer-motion'
+import { useRouter } from "next/router";
+import { en } from '../locales/en';
+import { ru } from '../locales/ru';
 
 //components
 import ProductsGrid from '../components/ProductsGrid';
 import Calc from '../components/Calc'
-
 
 
 const TitleAnimation = {
@@ -22,6 +24,8 @@ const TitleAnimation = {
 
 
 export default function Home() {
+  const router = useRouter();
+  const t = router.locale === 'en' ? en : ru;
   return (
     <div>
       <main className={styles.main}>
@@ -31,7 +35,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           className="container"
         >
-          <motion.h1 variants={TitleAnimation}>Главная</motion.h1>
+          <motion.h1 variants={TitleAnimation}>{t.title}</motion.h1>
 
           <Calc />
           <ProductsGrid />
