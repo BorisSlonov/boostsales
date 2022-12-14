@@ -9,15 +9,15 @@ import { ru } from '../locales/ru';
 const MyNav = () => {
 
     const router = useRouter();
-    const t = router.locale === 'en' ? en : ru;
+    const langJson = router.locale === 'en' ? en : ru;
 
     return (
         <ul className={MyNavStyles.nav}>
             <li className={router.pathname == "/" ? MyNavStyles.activeLink : ""}>
-                <Link href="/">{t.navLink1}</Link>
+                <Link href="/">{langJson.MyNav.navLink1}</Link>
             </li>
             <li className={router.pathname == "/about" ? MyNavStyles.activeLink : ""}>
-                <Link href="/about">{t.navLink2}</Link>
+                <Link href="/about">{langJson.MyNav.navLink2}</Link>
             </li>
         </ul>
     );

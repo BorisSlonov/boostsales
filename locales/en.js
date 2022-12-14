@@ -1,5 +1,7 @@
 ﻿export const en = {
-    title: 'Welcome',
-    navLink1 : 'Main',
-    navLink2 : 'About',
-  };
+  MyNav: {
+    navLink1: 'Main',
+    navLink2: 'About',
+  },
+  title: 'Welcome',
+};

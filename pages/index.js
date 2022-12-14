@@ -25,7 +25,7 @@ const TitleAnimation = {
 
 export default function Home() {
   const router = useRouter();
-  const t = router.locale === 'en' ? en : ru;
+  const langJson = router.locale === 'en' ? en : ru;
   return (
     <div>
       <main className={styles.main}>
@@ -35,8 +35,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           className="container"
         >
-          <motion.h1 variants={TitleAnimation}>{t.title}</motion.h1>
-
+          <motion.h1 variants={TitleAnimation}>{langJson.title}</motion.h1>
           <Calc />
           <ProductsGrid />
         </motion.div>

@@ -1,17 +1,24 @@
 ﻿import exp from "constants";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "../styles/LangSwitcher.module.scss"
 
+
 function LangSwitcher() {
+    const router = useRouter();
     return (
         <>
             <div className={styles.block}>
                 <div className={styles.body}>
-                    <Link href="/" locale="en" legacyBehavior>
-                        <a className={styles.locale}>En</a>
+                    <Link className={router.locale == "en" ? styles.activeLink : ""} href="/en" locale="en">
+                        <span className={styles.locale}>
+                            En
+                        </span>
                     </Link>
-                    <Link href="/" locale="ru" legacyBehavior>
-                        <a className={styles.locale} href="/" locale="ru">Ru</a>
+                    <Link className={router.locale == "ru" ? styles.activeLink : ""} href="/" locale="ru">
+                        <span className={styles.locale}>
+                            Ru
+                        </span>
                     </Link>
                 </div>
             </div>
