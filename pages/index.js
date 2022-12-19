@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Home.module.scss'
+import Locales from '../locales/Locales'
 import { motion } from 'framer-motion'
-import { useRouter } from "next/router";
-import { en } from '../locales/en';
-import { ru } from '../locales/ru';
+
 
 //components
 import ProductsGrid from '../components/ProductsGrid';
-import Calc from '../components/Calc'
+import Calc from '../components/Calc/Calc'
 
 
 const TitleAnimation = {
@@ -24,10 +23,11 @@ const TitleAnimation = {
 
 
 export default function Home() {
-  const router = useRouter();
-  const langJson = router.locale === 'en' ? en : ru;
+
   return (
-    <div>
+    <>
+      {/* <Locales /> */}
+
       <main className={styles.main}>
         <motion.div
           initial='hidden'
@@ -35,7 +35,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           className="container"
         >
-          <motion.h1 variants={TitleAnimation}>{langJson.title}</motion.h1>
+          <motion.h1 variants={TitleAnimation}>{Locales().title}</motion.h1>
           <Calc />
           <ProductsGrid />
         </motion.div>
@@ -52,6 +52,6 @@ export default function Home() {
       {/* <Script src="three.r134.min.js" />
       <Script src="vanta.rings.min.js" /> */}
 
-    </div >
+    </>
   )
 }

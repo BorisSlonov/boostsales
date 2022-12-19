@@ -13,7 +13,7 @@ const fromDowntoUp = {
     visible: custom => ({
         opacity: 1,
         y: 0,
-        transition: { delay: custom * 0.02 }
+        transition: { delay: custom * 0.3 }
     })
 }
 
@@ -28,9 +28,10 @@ function productsGrid() {
 
         >
             <div className={ProductsGrid.grid}>
-                {products.map(product => {
+                {products.map((product, index) => {
+                    console.log(index)
                     return (
-                        <motion.div variants={fromDowntoUp} custom={product.id + 1}
+                        <motion.div variants={fromDowntoUp} custom={index + 1}
                             key={product.id} className={ProductsGrid.card}>
                             <Image className={ProductsGrid.img} width={80} height={80} src={product.image} alt={`Preview of ${product.title}`} />
                             <h3>{product.title}</h3>
@@ -48,3 +49,4 @@ function productsGrid() {
 }
 
 export default productsGrid
+

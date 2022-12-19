@@ -1,4 +1,4 @@
-﻿import CalcStyles from '../styles/CalcStyles.module.scss'
+﻿import CalcStyles from '../../styles/CalcStyles.module.scss'
     function Calc() {
     
         return (
